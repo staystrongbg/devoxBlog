@@ -59,7 +59,7 @@ const Navbar = () => {
         <h2>DevoxBlog</h2>
         {links.map((l) => (
           <Link key={l.id} to={l.href} onClick={() => setResponsiveNav(false)}>
-            <h6 style={{ color: `#${l.color}` }}>{l.text}</h6>
+            <h6 style={{ color: `#${l.color}`, display: link.text === 'write' && 'none' }}>{l.text}</h6>
           </Link>
         ))}
       </div>
