@@ -16,12 +16,12 @@ export const links = [
     color: 'EE6352c1',
     textColor: 'f1f2f3',
   },
-  { id: 5, href: '/?cat=food', text: 'food', color: 'DE6449' }
-//   {
-//     id: 6,
-//     href: '/write',
-//     text: 'write',
-//     color: '791E94c1',
-//     textColor: 'f1f2f3',
-//   },
+  { id: 5, href: '/?cat=food', text: 'food', color: 'DE6449' },
+  {
+    id: 6,
+    href: '/write',
+    text: 'write',
+    color: '791E94c1',
+    textColor: 'f1f2f3',
+  },
 ];
