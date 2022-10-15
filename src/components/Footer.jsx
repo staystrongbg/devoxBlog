@@ -7,20 +7,22 @@ const Footer = () => {
         <h2>DevoxBlog</h2>
       </div>
       <div className='links'>
-        {links.map((l) => (
-          <Link to={l.href} key={l.id}>
-            <h6
-              onMouseOver={(e) => {
-                e.target.style = `color:#${l.color}`;
-              }}
-              onMouseOut={(e) => {
-                e.target.style = 'color:#f1f2f3';
-              }}
-            >
-              {l.text}
-            </h6>
-          </Link>
-        ))}
+        {links
+          .filter((li) => li.id !== 6)
+          .map((l) => (
+            <Link to={l.href} key={l.id}>
+              <h6
+                onMouseOver={(e) => {
+                  e.target.style = `color:#${l.color}`;
+                }}
+                onMouseOut={(e) => {
+                  e.target.style = 'color:#f1f2f3';
+                }}
+              >
+                {l.text}
+              </h6>
+            </Link>
+          ))}
       </div>
       <p>Copyright Devox 2022&copy;</p>
     </footer>

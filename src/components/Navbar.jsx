@@ -29,11 +29,13 @@ const Navbar = () => {
         </Link>
       </div>
       <div className='links'>
-        {links.map((l) => (
-          <Link to={l.href} key={l.id} style={styles(l.color, l?.textColor)}>
-            <h6> {l.text}</h6>
-          </Link>
-        ))}
+        {links
+          .filter((li) => li.id !== 6)
+          .map((l) => (
+            <Link to={l.href} key={l.id} style={styles(l.color, l?.textColor)}>
+              <h6> {l.text}</h6>
+            </Link>
+          ))}
       </div>
       <div className='user'>
         <img src={ja} alt='' />
@@ -57,11 +59,23 @@ const Navbar = () => {
         } dropIn `}
       >
         <h2>DevoxBlog</h2>
-        {links.map((l) => (
-          <Link key={l.id} to={l.href} onClick={() => setResponsiveNav(false)}>
-            <h6 style={{ color: `#${l.color}`, display: l.text === 'write' && 'none' }}>{l.text}</h6>
-          </Link>
-        ))}
+        {links
+          .filter((li) => li.id !== 6)
+          .map((l) => (
+            <Link
+              key={l.id}
+              to={l.href}
+              onClick={() => setResponsiveNav(false)}
+            >
+              <h6
+                style={{
+                  color: `#${l.color}`,
+                }}
+              >
+                {l.text}
+              </h6>
+            </Link>
+          ))}
       </div>
     </nav>
   );
