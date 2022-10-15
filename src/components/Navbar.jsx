@@ -57,7 +57,7 @@ const Navbar = () => {
         } dropIn `}
       >
         <h2>DevoxBlog</h2>
-        {links.slice(0,links.length-1).map((l) => (
+        {links.map((l) => (
           <Link key={l.id} to={l.href} onClick={() => setResponsiveNav(false)}>
             <h6 style={{ color: `#${l.color}` }}>{l.text}</h6>
           </Link>
